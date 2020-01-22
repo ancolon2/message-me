@@ -23,8 +23,8 @@ scroll_bottom = function(){
   };
 };
 
-submit_message = function(){
-  $('#message_body').target.value = "";
+clear_message = function(){
+  $('#message-text').val("")
 };
 
 $(document).on('turbolinks:load', function() {
@@ -32,7 +32,7 @@ $(document).on('turbolinks:load', function() {
   $('.message .close').on('click', function() {
     $(this).closest('.message').transition('fade');
   });
-  submit_message();
+  clear_message();
   scroll_bottom();
 })
 
