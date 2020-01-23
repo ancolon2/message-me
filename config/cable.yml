@@ -6,12 +6,4 @@ test:
 
 production:
   adapter: redis
-  #url: <%= ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" } %>
-  channel_prefix: message_me_production
-  #&production
-  url: redis://redistogo:44ec00004dd4a5afe77a649acee7a8f3@thing.redistogo.com:9093/
-  host: thing.redistogo.com
-  port: 11662
-  password: 44ec00004dd4a5afe77a649acee7a8f3
-  inline: true
-  timeout: 1
+  url: redis://redistogo:a64fb1773353fb8724618fc7718e1838@spinyfin.redistogo.com:11359/
