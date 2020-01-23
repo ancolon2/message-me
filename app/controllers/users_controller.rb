@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:edit, :update, :show]
+  before_action :set_user, only: [:edit, :update]
   #before_action :require_same_user, only: [:edit, :update, :destroy]
   #before_action :require_admin, only: [:destroy]
   
@@ -8,8 +8,7 @@ class UsersController < ApplicationController
   end
   
   def show
-    #@user = @messages.user.username
-    #@messages = Message.all
+    @user = User.all
   end
   
   def destroy
@@ -28,8 +27,8 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      flash[:success] = "Welcome to the alpha blog #{@user.username}"
-      redirect_to user_path(@user)
+      flash[:success] = "Welcome to the MessageMe Application"
+      redirect_to root_path
     else
       render 'new'  
     end
