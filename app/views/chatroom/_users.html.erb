@@ -1,7 +1,9 @@
 <div class="event">
   <div class="content">
     <div class="summary">
-      <em><%= User.pluck(:username) %></em>
+    <% @users.each do |user| %>
+      <li class='listing'><%= user.username %></li>
+    <% end %>
     </div>
   </div>
 </div>

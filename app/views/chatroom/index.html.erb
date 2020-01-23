@@ -11,10 +11,10 @@
         </div>
       </div>
       <div class="extra content">
-        <%= form_for(@message, html: {class: "ui reply form" , id:"message_body", role: "form"}, url: message_path, remote: true) do |f| %>
+        <%= form_for(@message, html: {class: "ui reply form", id: "message_body", role: "form"}, url: message_path, remote: true) do |f| %>
           <div class="field">
             <div class="ui fluid icon input">
-              <%= f.text_field :body, id:"message-text" %>
+              <%= f.text_field :body  %>
               <%= f.button '<i class="bordered inverted orange icon edit"></i>'.html_safe %>
             </div>
           </div>
@@ -26,7 +26,7 @@
     <div class="ui fluid raised card chatbox">
       <div class="content">
         <h4 class="ui center aligned medium icon header">
-          Listing all Users
+          Subscribed users
           <div class="field">
              <%= render 'users' %>
           </div>

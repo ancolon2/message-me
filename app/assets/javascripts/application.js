@@ -24,7 +24,12 @@ scroll_bottom = function(){
 };
 
 clear_message = function(){
-  $('#message-text').val("")
+  $('#message_body').on('keydown', function(e) {
+    if(e.keyCode == 13){
+     $('button').click();  
+     e.target.value = "";
+    };
+  });
 };
 
 $(document).on('turbolinks:load', function() {
