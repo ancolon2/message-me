@@ -43,8 +43,8 @@ Rails.application.configure do
 
   # Mount Action Cable outside main process or domain
   #config.action_cable.mount_path = '/cable'
-  config.action_cable.url = 'wss://messagemeapplication.herokuapp.com/cable'
-  config.action_cable.allowed_request_origins = ['https://messagemeapplication.herokuapp.com', 'http://messagemeapplication.herokuapp.com']
+  config.action_cable.url = 'wss://messagemechat.herokuapp.com/cable'
+  config.action_cable.allowed_request_origins = ['https://messagemechat.herokuapp.com', 'http://messagemechat.herokuapp.com']
   #Rails.application.config.action_cable.allowed_request_origins = ['messagemeapplication.herokuapp.com']
  
 
